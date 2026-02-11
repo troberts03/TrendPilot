@@ -21,6 +21,6 @@
     "environment": "node"
   },
   "openclaw": {
-    "extensions": ["skills/trendpilot"]
+    "extensions": ["./src/index.ts"]
   }
 }

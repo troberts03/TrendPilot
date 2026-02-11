@@ -3,12 +3,7 @@
   "name": "TrendPilot (CreatorOps)",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "skills": [
-    {
-      "id": "trendpilot",
-      "path": "skills/trendpilot"
-    }
-  ],
+  "skills": ["skills/trendpilot"],
   "configSchema": {
     "type": "object",
     "additionalProperties": false,

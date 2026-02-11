@@ -19,5 +19,8 @@
   },
   "vitest": {
     "environment": "node"
+  },
+  "openclaw": {
+    "extensions": ["skills/trendpilot"]
   }
 }

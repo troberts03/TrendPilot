@@ -1,0 +1,65 @@
+{
+  "id": "trendpilot",
+  "name": "TrendPilot (CreatorOps)",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "skills": [
+    {
+      "id": "trendpilot",
+      "path": "skills/trendpilot"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "youtubeApiKey": { "type": "string" },
+      "youtubeRegionCode": { "type": "string", "default": "US" },
+      "youtubeMaxResults": { "type": "number", "default": 10, "minimum": 1, "maximum": 50 },
+      "cacheTtlSeconds": { "type": "number", "default": 600 },
+      "enableScheduler": { "type": "boolean", "default": false },
+      "schedulerProvider": {
+        "type": "string",
+        "enum": ["none", "buffer", "hootsuite"],
+        "default": "none"
+      },
+      "schedulerToken": { "type": "string" },
+      "uiHints": {
+        "type": "object",
+        "properties": {
+          "youtubeApiKey": {
+            "label": "YouTube API Key",
+            "placeholder": "AIza...",
+            "sensitive": true
+          },
+          "youtubeRegionCode": {
+            "label": "YouTube Region Code",
+            "placeholder": "US"
+          },
+          "youtubeMaxResults": {
+            "label": "YouTube Max Results",
+            "placeholder": "10"
+          },
+          "cacheTtlSeconds": {
+            "label": "Cache TTL (seconds)",
+            "placeholder": "600"
+          },
+          "enableScheduler": {
+            "label": "Enable Scheduler (optional tool)",
+            "placeholder": "false"
+          },
+          "schedulerProvider": {
+            "label": "Scheduler Provider",
+            "placeholder": "none"
+          },
+          "schedulerToken": {
+            "label": "Scheduler Token",
+            "placeholder": "",
+            "sensitive": true
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}
